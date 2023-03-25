@@ -1,0 +1,33 @@
+plugins {
+    id "io.freefair.lombok" version "8.0.1" apply false
+}
+
+subprojects {
+    apply plugin: 'java-library'
+    apply plugin: 'io.freefair.lombok'
+
+    group = 'ru.den_abr'
+    version = '0.0.1-SNAPSHOT'
+
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(17)
+        }
+    }
+
+    configurations {
+        compileOnly {
+            extendsFrom annotationProcessor
+        }
+    }
+
+    repositories {
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://clojars.org/repo/' }
+    }
+
+    dependencies {
+        implementation("com.google.guava:guava:31.1-jre")
+    }
+}

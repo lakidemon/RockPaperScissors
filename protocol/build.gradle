@@ -1,0 +1,9 @@
+ext {
+    kryo = '5.4.0'
+    kryonet = '2.22.8'
+}
+
+dependencies {
+    api "com.esotericsoftware:kryo:$kryo"
+    api "com.github.crykn:kryonet:$kryonet"
+}

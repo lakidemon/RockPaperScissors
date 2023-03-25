@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/rps
+    username: root
+    password: 1
+  jpa:
+    hibernate:
+      ddl-auto: update
+  main:
+    web-application-type: none
+
+game:
+  server:
+    host: localhost
+    tcp-port: 54555
+  game-play:
+    choice-time: 30
+    notify-choice-time-on: [30, 15, 5, 3, 1]
+    game-rounds: 3
